@@ -1,8 +1,20 @@
+* {
+  font-family: sans-serif;
+  font-size: 30px;
+}
+
+body {
+  background-color: #3a8fe8;
+}
+
 .container {
   width: 500px;
   height: 500px;
   margin: auto;
-  background-color: #c3c9d2;
+  margin-top: 100px;
+  background-color: #94989e;
+  font-family: sans-serif;
+  font-size: 100px;
 }
 
 .display {
@@ -14,6 +26,7 @@
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 20px;
+  float: left;
 }
 
 .keypad {
@@ -28,13 +41,11 @@
 
 .control-btn {
   position: relative;
-  width: 172px !important;
+  width: 37.5% !important;
   height: 62.5px;
   float: left;
   text-align: center;
   vertical-align: center;
-  border: solid;
-  border-color: white;
 }
 
 .button {
@@ -43,6 +54,12 @@
   width: 25%;
   height: 62.5px;
   float: left;
-  border: solid;
-  border-color: white;
+}
+
+.operator {
+  background-color: #d77209;
+}
+
+.zero {
+  width: 50%;
 }
