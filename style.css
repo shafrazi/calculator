@@ -1,0 +1,48 @@
+.container {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  background-color: #c3c9d2;
+}
+
+.display {
+  position: relative;
+  display: inline-block;
+  height: 70px;
+  width: 460px;
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.keypad {
+  position: relative;
+  display: inline-block;
+  width: 463px;
+  margin-top: 15px;
+  margin-left: 19px;
+  margin-right: 19px;
+  height: 375px;
+}
+
+.control-btn {
+  position: relative;
+  width: 172px !important;
+  height: 62.5px;
+  float: left;
+  text-align: center;
+  vertical-align: center;
+  border: solid;
+  border-color: white;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+  height: 62.5px;
+  float: left;
+  border: solid;
+  border-color: white;
+}
