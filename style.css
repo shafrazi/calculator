@@ -25,9 +25,25 @@ body {
   background-color: white;
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: 5px;
+  float: left;
+  overflow: scroll;
+  text-align: right;
+}
+
+.expression {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 460px;
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-top: 20px;
   float: left;
   overflow: scroll;
+  text-align: right;
+  font-size: 20px;
 }
 
 .keypad {
@@ -62,6 +78,11 @@ body {
 }
 
 #equal {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+  height: 62.5px;
+  float: left;
   background-color: #d77209;
 }
 

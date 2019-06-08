@@ -25,13 +25,24 @@ function operate(operator, a, b) {
 
 
 let display = document.querySelector(".display");
+let expression = document.querySelector(".expression");
 let numButtons = document.querySelectorAll(".num");
 let operators = document.querySelectorAll(".operator");
 let equal = document.querySelector("#equal");
+let buttons = document.querySelectorAll(".button");
 let currentValue = "";
 let prevValue = "";
 let result;
 let operator;
+
+for (let i = 0; i < buttons.length; i++) {
+  let button = buttons[i];
+  button.addEventListener("click", function(event) {
+    // if (event.target.className === "num" || event.target.className === "operator") {
+      expression.innerHTML = expression.innerHTML + button.innerHTML;
+    // }
+  })
+}
 
 for (let i = 0; i < numButtons.length; i++) {
   numButtons[i].addEventListener("click", function(event) {
