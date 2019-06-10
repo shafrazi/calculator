@@ -86,10 +86,16 @@ for (let i = 0; i < numButtons.length; i++) {
 
 for (let i = 0; i < operators.length; i++) {
   operators[i].addEventListener("click", function(event) {
+    if (prevValue && currentValue && operator) {
+      result = operate(operator, prevValue, currentValue);
+      currentValue = result;
+      display.innerHTML = result;
+    }
     prevValue = currentValue;
     currentValue = "";
     operator = operators[i].id;
-    display.innerHTML = "";
+    console.log(prevValue, currentValue, operator);
+    // display.innerHTML = "";
   })
 }
 
