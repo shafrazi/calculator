@@ -60,14 +60,27 @@ let operator;
 for (let i = 0; i < buttons.length; i++) {
   let button = buttons[i];
   button.addEventListener("click", function(event) {
-      expression.innerHTML = expression.innerHTML + button.innerHTML;
+      if (currentValue.includes(".")) {
+        disableDecimal();
+        expression.innerHTML = expression.innerHTML + button.value;
+      } else {
+        enableDecimal();
+        expression.innerHTML = expression.innerHTML + button.value;
+      }
   })
 }
 
 for (let i = 0; i < numButtons.length; i++) {
   numButtons[i].addEventListener("click", function(event) {
-    currentValue = currentValue + numButtons[i].value;
-    display.innerHTML = currentValue;
+    if (currentValue.includes(".")) {
+      disableDecimal();
+      currentValue = currentValue + numButtons[i].value;
+      display.innerHTML = currentValue;
+    } else {
+      enableDecimal();
+      currentValue = currentValue + numButtons[i].value;
+      display.innerHTML = currentValue;
+    }
   })
 }
 
