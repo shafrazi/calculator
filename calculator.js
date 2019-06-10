@@ -1,18 +1,18 @@
 function add(a, b) {
-  return a + b;
+  return (a + b).toFixed(14) * 1e14 / 1e14;
 }
 
 function subtract(a, b) {
-  return a - b;
+  return (a - b).toFixed(14) * 1e14 / 1e14;
 }
 
 function multiply(a, b) {
-  return a * b;
+  return (a * b).toFixed(14) * 1e14 / 1e14;
 }
 
 function divide(a, b) {
   if (b !== 0) {
-    return a / b;
+    return (a / b).toFixed(14) * 1e14 / 1e14;
   } else {
     return "Error";
   }
