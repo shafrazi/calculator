@@ -11,7 +11,11 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-  return a / b;
+  if (b !== 0) {
+    return a / b;
+  } else {
+    return "Error";
+  }
 }
 
 function operate(operator, a, b) {
@@ -23,6 +27,22 @@ function operate(operator, a, b) {
   }
 }
 
+function clear() {
+  display.innerHTML = "";
+  expression.innerHTML = "";
+  prevValue = "";
+  currentValue = "";
+  operator = "";
+  result = 0;
+}
+
+function disableDecimal() {
+  decimalBtn.value = "";
+}
+
+function enableDecimal() {
+  decimalBtn.value = ".";
+}
 
 let display = document.querySelector(".display");
 let expression = document.querySelector(".expression");
@@ -30,6 +50,8 @@ let numButtons = document.querySelectorAll(".num");
 let operators = document.querySelectorAll(".operator");
 let equal = document.querySelector("#equal");
 let buttons = document.querySelectorAll(".button");
+let clearBtn = document.querySelector("#clear");
+let decimalBtn = document.querySelector("#decimal");
 let currentValue = "";
 let prevValue = "";
 let result;
@@ -38,9 +60,7 @@ let operator;
 for (let i = 0; i < buttons.length; i++) {
   let button = buttons[i];
   button.addEventListener("click", function(event) {
-    // if (event.target.className === "num" || event.target.className === "operator") {
       expression.innerHTML = expression.innerHTML + button.innerHTML;
-    // }
   })
 }
 
@@ -61,7 +81,11 @@ for (let i = 0; i < operators.length; i++) {
 }
 
 equal.addEventListener("click", function(event) {
-  result = operate(operator, prevValue, currentValue);
-  currentValue = result;
-  display.innerHTML = result;
+  if (prevValue && currentValue && operator) {
+    result = operate(operator, prevValue, currentValue);
+    currentValue = result;
+    display.innerHTML = result;
+  }
 })
+
+clearBtn.addEventListener("click", clear);
