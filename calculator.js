@@ -29,7 +29,7 @@ function operate(operator, a, b) {
 
 function clear() {
   display.innerHTML = "";
-  expression.innerHTML = "";
+  // expression.innerHTML = "";
   prevValue = "";
   currentValue = "";
   operator = "";
@@ -100,7 +100,7 @@ for (let i = 0; i < operators.length; i++) {
         result = operate(operator, prevValue, currentValue);
         currentValue = result;
         display.innerHTML = result;
-        // operator = "";
+        operator = "";
       }
       prevValue = currentValue;
       currentValue = "";

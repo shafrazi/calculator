@@ -9,7 +9,7 @@ body {
 
 .container {
   width: 500px;
-  height: 500px;
+  height: 450px;
   margin: auto;
   margin-top: 100px;
   background-color: #94989e;
@@ -27,7 +27,7 @@ body {
   background-color: white;
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: 5px;
+  margin-top: 15px;
   float: left;
   overflow: scroll;
   text-align: right;
